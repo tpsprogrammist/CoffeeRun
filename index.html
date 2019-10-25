@@ -9,7 +9,11 @@
     <script src="scripts/truck.js"></script>
     <script src="scripts/main.js"></script>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.css" integrity="sha256-Nfu23DiRqsrx/6B6vsI0T9vEVKq1M6KgO8+TV363g3s=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="/bootstrap-4.3.1-dist/css/bootstrap.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css"> -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.css" integrity="sha256-Nfu23DiRqsrx/6B6vsI0T9vEVKq1M6KgO8+TV363g3s=" crossorigin="anonymous" /> -->
 </head>
 <body>
     <div class="container">
@@ -22,9 +26,53 @@
                     <form data-coffee-order="form">
                         <div class="form-group">
                             <label for="coffeeOrder">Coffee Order</label>
-                            <input id="coffeeOrder" class="form-control" name="coffee">
+                            <input id="coffeeOrder" class="form-control" name="coffee" autofocus>
                         </div>
+                        <div class="form-group">
+                            <label for="emailInput">Email</label>
+                            <input type="email" class="form-control" name="emailAddress" id="emailInput" value="" placeholder="dr@no.com">
+                        </div>
+                        <div class="radio">
+                            <label for="">
+                                <input type="radio" name="size" value="short">
+                                Short
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label for="">
+                                <input type="radio" name="size" value="tall" checked>
+                                Tall
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label for="">
+                                <input type="radio" name="size" value="grande">
+                                Grande
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <label for="flavorShot">Flavor Shot</label>
+                            <div>
+                                    <select name="flavor" id="flavorShot" class="form-group">
+                                            <option value="">None</option>
+                                            <option value="caramel">Caramel</option>
+                                            <option value="amond">Amond</option>
+                                            <option value="mocha" selected>Mocha</option>
+                                            <option value="sencha">Sencha</option>
+                                            <option value="java">Java</option>
+                                        </select>
+                            </div>
+                            
+                        </div>
+                        <div class="input-group">
+                            <label for="strength-level">Caffeine Rating</label>
+                            <input type="range" name="strength" id="strength-level" value="30">
+                        </div>
+                        <button class="btn btn-default" type="submit">Submit</button>
+                        <button class="btn btn-default" type="reset">Reset</button>
+                        
                         <!-- Here will be data input elements -->
+
                     </form>
                 </div>
             </div>
