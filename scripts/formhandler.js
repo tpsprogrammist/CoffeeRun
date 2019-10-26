@@ -20,7 +20,7 @@ FormHandler.prototype.addSubmitHandler = function(fn) {
 
     var $ = window.jQuery;
 
-    console.log('Setting submiy handler for form');
+    console.log('Setting submit handler for form');
     //more code
     this.$formElement.on('submit', function(event) {
         event.preventDefault();
@@ -35,6 +35,10 @@ FormHandler.prototype.addSubmitHandler = function(fn) {
         })
 
         fn(data);
+
+        this.reset();
+
+        this.elements[0].focus();
 
 
     })
